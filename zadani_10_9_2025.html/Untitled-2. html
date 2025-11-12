@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opakování HTML</title>
+    <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+    <h1 style="text-decoration: underline;"> Základní formátování textu </h1>
+       <p style='text-align: justify;'>Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... 
+       Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem...
+       Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem...
+       Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... 
+       Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem...
+       Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem...
+       Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... Máme umět zarovnat odstavec (nejen nesmyslným) textem... </p>
+       <br>
+       <p> Taky máme umět odřádkování </p>
+       <p style="text-align: center;"> Tady je obrázek pana Burnse s relativní cestou</p>
+       <img src='../../obrazky/burns.webp' alt='Mr. Burns' width='35%'>
+       <ul>
+          <li>Položka 1</li>
+         <ul>
+          <li>Položka 1.1</li>
+          <li>Položka 1.2</li>
+          <li>Položka 1.3</li>
+         </ul>
+          <li>Položka 2</li>
+         <ul>
+          <li>Položka 2.1</li>
+          <li>Položka 2.2</li>
+          <li>Položka 2.3</li>
+         </ul>
+       </ul>
+       
+       <h3>Sloupec</h3>
+       <table border="1" class="sloupec">
+  <thead>
+    <tr>
+      <th>Sloupec 1</th>
+      <th>Sloupec 2</th>
+      <th>Sloupec 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="3">Něco 1</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Něco 2</td>
+      <td>Něco 3</td>
+      <td>Něco 4</td>
+    </tr>
+    <tr>
+      <td>Něco 5</td>
+      <td>Něco 6</td>
+    </tr>
+  </tbody>
+</table>
+  <br>
+  <br>
+<h3>Formulář : </h3>
+  <form>
+    <label for="jmeno">Zadej své jméno:</label>
+      <input type="text" id="jmeno" name="jmeno" placeholder="Např. OLi"><br>
+      <label for="heslo">Zadej heslo:</label>
+      <input type="text" id="heslo" name="heslo"><br>
+    <br>
+          <p>Vyber jednu z možností:</p>
+          <input type="radio" id"option1" name="vyber" value="1">
+          <label for="option1"> A </label>
+    <br>
+          <input type="radio" id"option2" name="vyber" value="2">
+          <label for="option2"> B </label>
+    <br>
+          <input type="radio" id"option3" name="vyber" value="3">
+          <label for="option3"> C </label>
+     <br>
+          <label for="souhlas">
+            Bylo ti 18?
+            <input type="checkbox" id="souhlas" name="souhlas">
+          </label>
+     <br>
+          <label for="barva">Vyber barvu:</label>
+            <select id="barva" name="barva">
+              <option value="cervena" selected>Červená</option>
+              <option value="zelena">Zelená</option>
+              <option value="modra">Modrá</option>
+            </select>
+     <br>
+     <br>
+          <label for="komentar">Napiš komentář:</label><br>
+          <textarea id="komentar" name="komentar" rows="4" cols="40">
+          </textarea>
+     <br>
+     <br>
+          <label for="cislo">Zadej číslo:</label>
+          <input type="number" id="cislo" name="cislo">
+     <br>
+     <br>
+     <label for="datum">Zadej datum:</label>
+          <input type="date" id="datum" name="datum">
+      <br>
+      <br>
+          <label for="hodnota">Nastav hodnotu:</label>
+          <input type="range" id="hodnota" name="hodnota" min="0" max="100" value="50">
+     <br>
+     <br>
+          <input type="submit" value="Odeslat" class="button">
+  </form>
+       
+</body>
+</html>
