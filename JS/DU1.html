@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uhlopricka</title>
+</head>
+<body>
+    <script>
+      let d = prompt("Zadej délku úhlopříčky čtverce:");
+
+      if (d === null) {
+        alert("Zrušeno uživatelem.");
+      }
+
+      d = parseFloat(d);
+
+      if (isNaN(d)) {
+        alert("Chyba: zadaná hodnota není číslo.");
+      }
+
+      if (d <= 0) {
+        alert("Chyba: zadej číslo větší než 0.");
+      }
+
+      let vysledek = (d * d) / 2;
+
+      alert("Obsah čtverce s úhlopříčkou " + d + " je přibližně " + vysledek + ".");
+    </script>
+</body>
+</html>
