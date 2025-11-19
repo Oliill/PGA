@@ -7,9 +7,17 @@
 
 
     <script>
-        spustitsepokliknuti
+       function spustiSePoKliknuti()
         {
-            alert("kliknul jsi na tlacitko")
+            //alert("kliknul jsi na tlacitko")
+            let formularovyPrvek = document.getElementById("cisloInput");
+            //alert(typeof formularovyPrvek);
+
+            let ciselnyVstup = formularovyPrvek.value*1;
+            alert(typeof ciselnyVstup);
+            //divam se na hodnotu value u form. prvku
+            // najdu tam to co uzivatel do inputu zadal
+            
         }
 
 
@@ -20,8 +28,8 @@
     <form>
 
 <label for="cisloInput">Zadej cislo</label>
-<input type="number" id="cisloInput">
-<input type="button" value="Spustit" onclick="">
+<input type="number" id="cisloInput" placeholder="123456">
+<input type="button" value="Spustit" onclick="spustiSePoKliknuti()">
 
 
     </form>
