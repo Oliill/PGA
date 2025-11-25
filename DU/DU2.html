@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaci ukol 2</title>
+  
+<style>
+body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:2rem}
+label,button{display:block;margin:.5rem 0}
+input{width:8rem}
+.err{color:#a00}
+</style>
+
+
+</head>
+
+<body>
+    
+<form id="f" novalidate>
+<label>A (a): <input id="a" name="a" type="number" step="any" min="0" required></label>
+<label>B (b): <input id="b" name="b" type="number" step="any" min="0" required></label>
+<label>C (c): <input id="c" name="c" type="number" step="any" min="0" required></label>
+<button type="submit">Spočítat</button>
+<p id="msg" aria-live="polite"></p>
+</form>
+
+<script>
+
+const areaByHeron = (a,b,c) => {
+const s = (a+b+c)/2;
+const val = s*(s-a)*(s-b)*(s-c);
+return val>0 ? Math.sqrt(val) : NaN;
+};
+
+
+const f = document.getElementById('f');
+const msg = document.getElementById('msg');
+
+
+f.addEventListener('submit', e => {
+e.preventDefault(); // zabrání odeslání
+msg.className = '';
+
+const a = Number(document.getElementById('a').value);
+const b = Number(document.getElementById('b').value);
+const c = Number(document.getElementById('c').value);
+
+
+
+if (![a,b,c].every(v => Number.isFinite(v) && v>0)) {
+msg.textContent = 'Zadejte kladná čísla pro všechny strany.';
+msg.className = 'err';
+return;
+}
+
+if (!(a + b > c && a + c > b && b + c > a)) {
+msg.textContent = 'Zadané délky netvoří trojúhelník (porušena trojúhelníková nerovnost).';
+msg.className = 'err';
+return;
+}
+
+
+const area = areaByHeron(a,b,c);
+if (!Number.isFinite(area)) {
+msg.textContent = 'Chyba při výpočtu.';
+msg.className = 'err';
+return;
+}
+
+
+msg.textContent = `Obsah: ${area.toFixed(6)} (jednotky²)`;
+});
+</script>
+
+
+
+</body>
+</html>
