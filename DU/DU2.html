@@ -27,7 +27,7 @@ input{width:8rem}
 
 <script>
 
-const areaByHeron = (a,b,c) => {
+const area = (a,b,c) => {
 const s = (a+b+c)/2;
 const val = s*(s-a)*(s-b)*(s-c);
 return val>0 ? Math.sqrt(val) : NaN;
