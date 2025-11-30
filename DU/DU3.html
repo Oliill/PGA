@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Pocet uhlopricek</title>
+
+<script>
+function spocitat() {
+let n = parseInt(document.getElementById("n").value);
+
+
+if (isNaN(n) || n < 3) {
+document.getElementById("vysledek").textContent = "Zadej cele cislo alespon 3.";
+return;
+}
+
+let uhlop = n * (n - 3) / 2;
+
+
+document.getElementById("vysledek").textContent =
+"Pocet uhlopricek: " + uhlop;
+}
+</script>
+
+
+
+</head>
+<body>
+
+<label>Pocet vrcholu:
+<input id="n" type="number" min="3">
+</label>
+<button onclick="spocitat()">Spocitat</button>
+
+
+<p id="vysledek"></p>
+
+</body>
+</html>
