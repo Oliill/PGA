@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulacka</title>
+<script>
+
+function kalkulacka (a, b){
+    let a = document.getElementById("a").value*1
+    let operace = document.getElementById("operace")
+    let b = document.getElementById("b").value*1
+    let vystupniodstavec = document.getElementById("odstup")
+    let vysledek
+
+if( operace == "+"){
+vysledek = a+b
+}
+else if (operace == "-"){
+vysledek = a-b
+}
+else if (operace == "*"){
+vysledek = a*b
+}
+else if (operace == "/"){
+
+    vysledek = a/b
+}
+else { alert ("tuto operace neznam zadej pls +,-,* nebo /")
+    return
+}
+vystupniodstavec.inter.Html
+
+
+}
+
+
+</script>
+</head>
+
+<body>
+
+<form>
+    <label>zadej cislo a</label>
+    <input type="number" id="a"><br>
+    <label>operace</label>
+    <input type="number" id="operace"><br>
+    <label>zadej cislo b</label>
+    <input type="number" id="b"><br>
+    <input type="button" value="Spocitat" onclick="kalkulacka()">
+</form>
+<p id="odstup"></p>
+
+</body>
+</html>
