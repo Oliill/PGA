@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+        <input type="number" id="a"><br>
+        <input type="number" id="b"><br>
+        <input type="button" value="pocitat" onclick="rovnice()">
+
+    </form>
+
+    <p id="vysledek"></p>
+
+    <script>
+
+    function rovnice () {
+
+    let a = document.getElementById("a").value*1
+    let b = document.getElementById("b").value*1
+    
+    if (!a || !b) { 
+        alert ("chyba a a b musi byt zadane hodnoty >0")
+        return  
+    }
+    
+    //ax+b=0
+    //ax+b=c, c=0
+
+    let c = 0
+    //-b, ax = c-b
+    let d = c-b
+    // /a,x=(c-b)/a
+    let x = d/a 
+
+    let vysledek = document.getElementById("vysledek")
+    vysledek.setHTMLUnsafe(x.toString())
+
+    }
+
+    </script>
+</body>
+</html>
