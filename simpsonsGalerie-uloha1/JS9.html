@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<script>
+ let idsimp1 = document.getElementById("simp1")
+ let idsimp2 = document.getElementById("simp2")
+ let idsimp3 = document.getElementById("simp3")
+
+
+ function vyber1()
+ {
+    if(idsimp1.src.includes("simp1"))
+    {
+    simp1.height = 500
+    simp2.height = 300
+    simp3.height = 300
+    }
+  }
+
+ 
+ function vyber2(){
+ 
+  if(idsimp2.src.includes("simp2")) {
+  simp1.height = 300
+  simp2.height = 500
+  simp3.height = 300
+  }
+ }
+
+ 
+ function vyber3(){
+ 
+  if(idsimp3.src.includes("simp3")) {
+  simp1.height = 300
+  simp2.height = 300
+  simp3.height = 500
+  }
+ }
+
+
+</script>
+
+</head>
+
+<body>
+
+  <img src="obr1.jpg"  height="300"  onclick="vyber1()" id="simp1">
+  <img src="obr2.jpg"  height="300"  onclick="vyber2()" id="simp2">
+  <img src="obr3.jpg"  height="300"  onclick="vyber3()" id="simp3">
+
+</body>
+</html>
