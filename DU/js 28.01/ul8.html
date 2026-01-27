@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://i.pinimg.com/736x/f4/79/1e/f4791e8c01d83f6af819689ab4bfb104.jpg" alt="epstein" width="500" onmouseover="zvetseni()" onmouseout="reset()" id="obrazek">
+
+    <script>
+        function zvetseni(){
+            let obrazek = document.getElementById("obrazek")
+            obrazek.width = obrazek.width*2
+        }
+
+        function reset(){
+        let obrazek = document.getElementById("obrazek")
+        obrazek.width = "500"    
+        }
+    </script>
+</body>
+</html>
