@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="zvetseniTextu()"> + </button>
+    <button onclick="zmenseniTextu()"> - </button>
+    <p id="vystup" style="font-size: 20px;">ghjksgfdhj</p>
+
+    <script>
+        let vystup = document.getElementById("vystup");
+    
+        function zvetseniTextu(){
+            let velikost = parseFloat(vystup.style.fontSize);
+            vystup.style.fontSize = (velikost * 1.1) + "px";
+        }
+         
+        function zmenseniTextu(){
+            let velikost = parseFloat(vystup.style.fontSize);
+            vystup.style.fontSize = (velikost / 1.1) + "px";
+        }
+    </script>
+</body>
+</html>
