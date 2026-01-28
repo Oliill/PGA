@@ -7,17 +7,24 @@
 </head>
 <body>
     <script>
-        let soucet = 0;
-        while(true){
-            let vstup = prompt("zadej cislo nebo stop");
-            if (vstup == "stop"){
-                break;
+       function prumer (){
+
+            let n = prompt("zadej pocet cisel")
+            let soucet = 0
+            for (let i =0; i < n; i++)
+            {
+                let cislo = prompt("zadej cislo")*1
+                soucet+= cislo
+
+
             }
-            let cislo = parseFloat(vstup);
-            soucet+=cislo
+
+            alert(soucet/n)
+
+       }
             
-        }
-        alert(soucet)
+    
+        
 
     </script>
 </body>
