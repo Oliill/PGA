@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max a Min</title>
+</head>
+<body onload="unluck()">
+
+<script>
+function unluck() {
+
+let ncisel = prompt("Kolik chceš čísel?");
+
+if (ncisel == 0) {
+    alert("Zrušeno");
+    return;
+}
+
+if (isNaN(ncisel)) {
+    alert("Musíš zadat číslo!");
+    return;
+}
+
+ncisel = Number(ncisel);
+
+let max = null;
+let min = null;
+
+for (let i = 0; i < ncisel; i++) {
+
+    let cislo = prompt("Zadej číslo:");
+
+    if (isNaN(cislo)) {
+        alert("To není číslo!");
+        i--; 
+        continue;
+    }
+
+    cislo = Number(cislo);
+
+    if (max === null || cislo > max) {
+        max = cislo;
+    }
+
+    if (min === null || cislo < min) {
+        min = cislo;
+    }
+}
+
+alert("Maximální číslo je: " + max);
+alert("Minimální číslo je: " + min);
+
+}
+</script>
+
+</body>
+</html>

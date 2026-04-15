@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="stranka" onload="tolala()">
+    <script>
+        function tolala()
+        {
+            let rodicovskyObjekt = document.getElementById("stranka")
+            let pocetcetverecku = rodicovskyObjekt.clientWidth
+            for(let i=0;i<10;i++)
+        {
+            let potomek = document.createElement("div")
+            let souradniceX = 60*i +100
+            potomek.style = "background-color: #b24247; width:50px; height:50px; position:absolute; left:100px; top:50px"
+            rodicovskyObjekt.appendChild(potomek)
+        }
+
+
+        
+
+        
+        }
+    </script>
+
+</body>
+</html>

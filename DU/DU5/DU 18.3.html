@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Pyramida z plechovek</title>
+
+</head>
+<body>
+
+<h1>Pyramida z plechovek</h1>
+
+<p>Zadej počet plechovek na straně spodní vrstvy:</p>
+
+<input id="vstup" type="text">
+<button onclick="spocitej()">Spočítat</button>
+
+<div id="vysledek"></div>
+
+<script>
+
+function spocitej(){
+
+    let hodnota = document.getElementById("vstup").value;
+
+    if(hodnota === ""){
+        alert("Zadej číslo!");
+        return;
+    }
+
+    let a = Number(hodnota);
+
+    if(isNaN(a)){
+        alert("Musíš zadat číslo!");
+        return;
+    }
+
+    if(a <= 0){
+        alert("Číslo musí být větší než 0!");
+        return;
+    }
+
+    let soucet = 0;
+
+    for(let i = a; i >= 1; i--){
+        soucet = soucet + (i * i);
+    }
+
+    document.getElementById("vysledek").innerText =
+        "Celkový počet plechovek je: " + soucet;
+
+}
+
+</script>
+
+</body>
+</html>
